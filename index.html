@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GraceFlow - Faith-Forward Wellness & Cycle Tracking</title>
+    <meta name="description" content="Track your glucose, cycle, and wellness journey with grace. A premium health companion designed for women who value both science and faith.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: linear-gradient(135deg, #f8faf9 0%, #e8f1ed 100%);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #4a7c59 0%, #5d9b6d 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+        }
+
+        .hero .tagline {
+            font-size: 1.5rem;
+            font-weight: 300;
+            opacity: 0.95;
+            margin-bottom: 40px;
+        }
+
+        .hero .cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: white;
+            color: #4a7c59;
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .hero .cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(0,0,0,0.15);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 20px;
+        }
+
+        .features {
+            background: white;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #4a7c59;
+            margin-bottom: 60px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 30px;
+            border-radius: 16px;
+            background: #f8faf9;
+            transition: transform 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            color: #5a6d75;
+            line-height: 1.7;
+        }
+
+        .testimonial {
+            background: linear-gradient(135deg, #e8f1ed 0%, #f8faf9 100%);
+            text-align: center;
+        }
+
+        .testimonial blockquote {
+            font-size: 1.5rem;
+            font-style: italic;
+            color: #4a7c59;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+        }
+
+        .testimonial cite {
+            font-style: normal;
+            color: #5a6d75;
+            font-size: 1.1rem;
+        }
+
+        .download {
+            background: white;
+            text-align: center;
+        }
+
+        .download h2 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #4a7c59;
+            margin-bottom: 30px;
+        }
+
+        .download p {
+            font-size: 1.2rem;
+            color: #5a6d75;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .app-badges {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .app-badge {
+            display: inline-block;
+            background: #000;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+
+        .app-badge:hover {
+            opacity: 0.8;
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            padding: 60px 20px 30px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.2rem;
+            }
+
+            .features h2, .download h2 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>GraceFlow</h1>
+        <p class="tagline">Your wellness journey, guided by faith and science</p>
+        <a href="#download" class="cta">
+            <span>Download Now</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10 14l-6-6h12l-6 6z"/>
+            </svg>
+        </a>
+    </div>
+
+    <section class="features">
+        <div class="container">
+            <h2>Everything you need for holistic wellness</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Glucose Tracking</h3>
+                    <p>Understand how your body responds to food, stress, and lifestyle with intuitive glucose logging and insights.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌸</div>
+                    <h3>Cycle Awareness</h3>
+                    <p>Track your menstrual cycle with grace and understand the beautiful rhythms of your body.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💚</div>
+                    <h3>Symptom Journaling</h3>
+                    <p>Document how you feel—physically, emotionally, and spiritually—to uncover patterns and celebrate progress.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Personal Coaching</h3>
+                    <p>Connect with faith-forward wellness coaches who understand your values and support your whole person.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📖</div>
+                    <h3>Faith Integration</h3>
+                    <p>Wellness rooted in grace, not guilt. Find encouragement that honors both your body and your beliefs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>Beautiful Design</h3>
+                    <p>A calm, premium experience that feels like a breath of fresh air—never clinical, always human.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial">
+        <div class="container">
+            <blockquote>
+                "GraceFlow helped me understand my body in a way that honors my faith. It's not just another health app—it's a companion on my wellness journey."
+            </blockquote>
+            <cite>— Sarah M., Early Adopter</cite>
+        </div>
+    </section>
+
+    <section id="download" class="download">
+        <div class="container">
+            <h2>Begin your journey today</h2>
+            <p>Join women who are discovering wellness that honors both body and spirit. Available now on iOS.</p>
+            <div class="app-badges">
+                <a href="https://apps.apple.com" class="app-badge">
+                    Download on the App Store
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="mailto:support@graceflow.app">Support</a>
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/about">About Us</a>
+                <a href="/blog">Blog</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 GraceFlow. All rights reserved.</p>
+                <p style="margin-top: 10px; font-size: 0.85rem;">Version 1.0</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
